@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+    body{
+        background-color: #394F8A;
+    }
+    </style>
+    <div class="container mt-5" data-aos="fade-up" data-aos-duration="3000">
+        <div class="card project-detail-header">
+            <div class="card-header">
+                <!-- Project Title -->
+                <h3 class="card-title text-center project-detail-text">{{ project.title }}</h3>
+            </div>
+            <figure class="figure">
+                <!-- Project Image -->
+                {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" class="card-img-top zoom custom-card-width ">
+                {% endif %}
+            </figure>
+            <div class="card-body">
+                <!-- Project Description -->
+                <h5 class="text-white-50">Description:</h5>
+                <p class="card-text project-detail-text">{{ project.description }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

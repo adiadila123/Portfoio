@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Home -->
+ <section id="home" class="d-flex align-items-center">
+    <div class="container text-center" data-aos="fade-up">
+        <img src="{% static 'img/img_avatar.png' %}" alt="Your Name"
+             class="img-fluid rounded-circle mb-4" style="width: 150px;"
+             data-aos="fade-down" data-aos-duration="3000">
+        <h1 class="display-4 mb-3">Your Name</h1>
+        <p class="lead mb-4">Web Developer | Designer | [Any other profession]</p>
+        <a href="#about" class="btn btn-primary btn-lg">Learn More About Me</a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="d-flex pt-lg-5" data-aos="fade-in">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="3000">
+                <!-- Profile Image -->
+                <img src="https://www.w3schools.com/bootstrap5/img_avatar3.png" alt="Your Name" class="img-fluid rounded-circle mt-5">
+            </div>
+            <div class="col-lg-6 col-md-12" data-aos="fade-left" data-aos-duration="3000">
+                <!-- Personal Details -->
+                <h2 class="display-4 mt-5">Your Name</h2>
+                <p class="lead">Your Professional Title</p>
+                <p>
+                    With over X years of experience in [your field or industry], I have honed my skills in [specific skills like "web development, user interface design, and digital marketing"]. I've had the opportunity to work with [companies, brands, or projects you've worked on], helping them [specific achievements like "increase their online sales by 40%" or "design user-friendly interfaces for their flagship products"].
+                </p>
+                <p>
+                    I hold a [your degree, for example, "Bachelor's in Computer Science"] from [Your University/College]. Beyond my formal education, I've taken courses in [specific courses or certifications you've taken related to your profession].
+                </p>
+                <p>
+                    In my free time, I [hobbies or personal interests, like "enjoy hiking, reading tech blogs, and volunteering at local community centers"]. I believe in lifelong learning and continuously strive to enhance my skills and knowledge in [your field].
+                </p>
+                <!-- Optional: Social Media or Portfolio Links
+                <a href="#" class="btn btn-primary mt-3">Download My CV</a>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="d-flex">
+    <div class="parallax-container">
+        <div class="parallax-content" data-aos="fade-down" data-aos-duration="3000">
+            {% include "portfolio/portfolio.html" %}
+        </div>
+    <div class="parallax-background"></div>
+    </div>
+</section>
+
+<!-- Contact -->
+<!--<section id="contact" class="d-flex contact-container">
+    <div class="container mt-5" data-aos="fade-down" data-aos-duration="3000">
+        <h2 class="text-center text-white mt-5">Contact Me</h2>
+        <div class="card bg-light">
+            <div class="card-title"></div>
+            <div class="card-body">
+                <form method="post" action="{% url 'contact' %}">
+                   {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    <button type="reset" class="btn btn-outline-primary">Reset</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+{% endblock %}

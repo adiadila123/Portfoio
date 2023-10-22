@@ -1,0 +1,136 @@
+/* General styles for the site */
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif, Arial, Helvetica;
+}
+
+section#home {
+    background-color: #4EA1D3;
+    min-height: 100vh;
+}
+
+section#about {
+    background-color: #F2F1EF;
+    min-height: 100vh;
+}
+
+section#projects {
+    background-color: #394F8A;
+}
+
+section#contact {
+    background-color: #4A6173;
+    min-height: 100vh;
+}
+
+.project-detail-bg {
+    background-color: #92a8d1;  /* Light gray background */
+    min-height: 100vh;  /* Ensures the background color fills the entire viewport height */
+}
+
+.project-detail-header {
+    background-color: #697184;
+}
+
+.project-detail-text {
+    color: lightgray;
+}
+
+.card-img-top.zoom {
+    transition: transform 0.5s; /* Animation */
+    cursor: pointer; /* Optional: Show zoom cursor on hover */
+}
+
+.card-img-top.zoom:hover {
+    transform: scale(2.2); /* Zoom in by 10% when hovering */
+}
+
+.card .figure {
+    overflow: hidden;
+}
+
+.custom-card-width {
+    max-width: 100%;  /* Adjust this value according to your design preference */
+    height: 400px;
+    object-fit: cover;
+    image-rendering: high-quality;
+    margin: 0 auto;   /* Center the card */
+}
+
+
+/* Parallax styles */
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 900px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+    text-align: center; /* Optional, adjust based on your content */
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* Adjust based on desired parallax speed */
+    z-index: 0;
+    background-image: url('https://boldentity.com/wp-content/uploads/2021/07/CC6R5WPw.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Adjustments for Bootstrap compatibility */
+.parallax-container .container {
+    /* Any necessary overrides for Bootstrap's .container inside parallax */
+}
+
+.contact-container {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    border-radius: 5px;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Mobile-first styles */
+.element {
+    /* styles for mobile */
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .element {
+        /* styles for tablets */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+    .element {
+        /* styles for desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Disable parallax for small devices */
+    .parallax-background {
+        background-attachment: scroll;
+        height: 100%;
+    }
+}
+
+
